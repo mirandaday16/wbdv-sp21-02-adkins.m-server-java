@@ -1,2 +1,12 @@
 .mda-sticky-nav-bar {
+    background-color: lightblue;
+    padding: 10px;
+    font-size: larger;
+    vertical-align: middle;
+    position: fixed;
+    width: 100%;
+    z-index: 1;}
+
+.container {
+    padding-top: 58px;
 }
