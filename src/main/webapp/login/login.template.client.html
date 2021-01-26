@@ -1,39 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link href="./login.style.client.css" rel="stylesheet">
+
+    <!-- FontAwesome Kit Code -->
+    <script src="https://kit.fontawesome.com/8c295e10df.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap-->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+    <!-- Global Stylesheet -->
+    <link href="../styles.css" rel="stylesheet">
+    <!-- Login Stylesheet -->
+    <link href="login.style.client.css" rel="stylesheet">
 </head>
 <body>
 <div class="container">
 
-    <h1>
+    <h1 class="mda-headline">
         Sign In
     </h1>
 
-    <p>
-        Username <input/>
-    </p>
+    <br/>
 
-    <p>
-        Password <input/>
-    </p>
+    <form>
+        <!-- Username label and input-->
+        <div class="form-group row">
+            <label for="username" class="col-sm-2 col-form-label mda-body-text">
+                Username </label>
+            <div class="col-sm-10">
+                <input class="form-control"
+                       id="username">
+            </div>
+        </div>
 
-    <p>
-        <button>
-            Sign In
-        </button>
-    </p>
+        <!-- Password label and input-->
+        <div class="form-group row">
+            <label for="password" class="col-sm-2 col-form-label mda-body-text">
+                Password </label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control"
+                       id="password">
+            </div>
+        </div>
 
-    <a>
-        Forgot Password
-    </a>
+        <!-- Sign In Button-->
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label"></label> <!-- No label; just to align spacing with above sections-->
+            <div class="col-sm-10">
+                <a href="../course_list/course_list.template.client.html" class="btn mda-btn-long btn-block">
+                    Sign In
+                </a>
+                <!-- Links Row (under button)-->
+                <br/>
+                <div class="row mda-center-in-div">
+                    <div class="col-6">
+                        <a href="#" class="mda-bottom-link">
+                            Forgot Password?
+                        </a>
+                    </div>
 
-    <a>
-        Sign Up
-    </a>
+                    <div class="col-6">
+                        <a href="../profile/profile.template.client.html" class="mda-bottom-link">
+                            Sign Up
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>
 </body>
 </html>

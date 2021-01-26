@@ -10,3 +10,37 @@
 .container {
     padding-top: 58px;
 }
+
+.mda-center-in-div {
+    text-align: center;
+}
+
+.mda-headline {
+    color: var(--primary)
+}
+
+.mda-body-text {
+    color: var(--text)
+}
+
+/* Theme Colors */
+:root {
+    --surface: #F8F6F2;
+    --surface-dark: #DDD8C4;
+    --text: #191919;
+    --text-light: #333333;
+    --primary: #3E6259;
+    --primary-light: #67A293;
+    --primary-dark: #273F39;
+    --secondary: #1D3B72;
+    --secondary-light: #4D7BD1;
+    --secondary-dark: #0E1C36;
+    --accent: #987D7C;
+    --danger: #92140C;
+    --danger-light: #F4837B;
+}
+
+/* Theme Fonts*/
+:root {
+
+}
