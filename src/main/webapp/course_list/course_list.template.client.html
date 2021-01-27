@@ -10,6 +10,8 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
     <!-- Global Stylesheet -->
     <link href="../styles.css" rel="stylesheet">
+    <!-- Course List Stylesheet -->
+    <link href="course_list.style.client.css" rel="stylesheet">
     <!-- Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
@@ -36,12 +38,96 @@
 </div>
 
 <!-- Page Content-->
-<div class="container">
+<div class="container mda">
     <!-- Headline-->
     <h1 class="h1">
         Dashboard
     </h1>
     <br/>
+    <!-- Table of Courses (hardcoded values for now)-->
+    <table class="table table-striped mda-body-text">
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Owned by</th>
+            <th>Last modified</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                <a href="../editor/editor.template.client.html">
+                    CS5610
+                </a>
+            </td>
+            <td>J. Annunziato</td>
+            <td>1/25/2021</td>
+            <td><i class="fas fa-trash"/></td>
+        </tr>
+        <tr>
+            <td><a href="../editor/editor.template.client.html">
+                CS5500            </a></td>
+            <td>J. Boyland</td>
+            <td>1/25/2021</td>
+            <td><i class="fas fa-trash"/></td>
+        </tr>
+        <tr>
+            <td><a href="../editor/editor.template.client.html">
+                CS5520
+            </a></td>
+            <td>D. Feinberg</td>
+            <td>12/28/2020</td>
+            <td><i class="fas fa-trash"/></td>
+        </tr>
+        </tbody>
+    </table>
+    <br/>
+
+    <!-- Yesterday section -->
+    <h3 class="h3">Yesterday</h3>
+    <!-- Table of Courses (hardcoded values for now)-->
+    <table class="table table-striped mda-body-text">
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Owned by</th>
+            <th>Last modified</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                <a href="../editor/editor.template.client.html">
+                    CS5610
+                </a>
+            </td>
+            <td>J. Annunziato</td>
+            <td>1/25/2021</td>
+            <td><i class="fas fa-trash"/></td>
+        </tr>
+        <tr>
+            <td><a href="../editor/editor.template.client.html">
+                CS5500            </a></td>
+            <td>J. Boyland</td>
+            <td>1/25/2021</td>
+            <td><i class="fas fa-trash"/></td>
+        </tr>
+        <tr>
+            <td><a href="../editor/editor.template.client.html">
+                CS5520
+            </a></td>
+            <td>D. Feinberg</td>
+            <td>12/28/2020</td>
+            <td><i class="fas fa-trash"/></td>
+        </tr>
+        </tbody>
+    </table>
+    <br/>
+
+    <!-- Last 7 days section -->
+    <h3 class="h3">Last 7 Days</h3>
     <!-- Table of Courses (hardcoded values for now)-->
     <table class="table table-striped mda-body-text">
         <thead>

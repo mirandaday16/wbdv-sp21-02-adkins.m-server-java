@@ -1,3 +1,72 @@
 .list-group li {
+    background-color: var(--surface);
+}
+
+.mda-widget-window {
+    background-color: var(--surface);
+    padding: 25px;
+}
+
+.mda-dark-surface {
     background-color: var(--surface-dark);
+}
+
+.mda-widget-body {
+    background-color: var(--surface-dark);
+    padding: 25px 10px;
+    vertical-align: top;
+    border-style: ridge;
+    border-width: thin;
+    border-color: var(--text-lightest);
+}
+
+.form-group {
+    margin-bottom: 0;
+}
+
+.nav-tabs {
+    border-bottom: 0;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    background-color: var(--surface-dark);
+    border-color: var(--text-lightest);
+    border-bottom-color: transparent;
+    color: var(--text);
+    font-weight: bolder;
+    font-family: "Lato", sans-serif;
+}
+
+.nav-link {
+    color: var(--text-light);
+    font-family: "Lato", sans-serif;
+}
+
+.nav-tabs a:hover {
+    background-color: var(--surface-dark);
+    color: var(--accent);
+    font-family: "Lato", sans-serif;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: var(--secondary);
+    font-family: "Lato", sans-serif;
+}
+
+.nav-pills a:hover {
+    background-color: var(--surface);
+    color: var(--secondary);
+    border-style: inset;
+    border-width: thin;
+    border-color: var(--surface);
+    font-family: "Lato", sans-serif;
+}
+
+.pills-section-underlined {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-color: transparent;
+    border-width: thin;
+    border-style: solid;
+    border-bottom-color: var(--text-lightest);
+
 }

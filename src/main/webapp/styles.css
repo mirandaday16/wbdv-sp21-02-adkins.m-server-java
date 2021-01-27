@@ -7,7 +7,8 @@
     font-size: larger;
     position: fixed;
     width: 100%;
-    z-index: 1;}
+    z-index: 1;
+}
 
 .container {
     padding-top: 72px;
@@ -31,6 +32,12 @@
     line-height: normal;
 }
 
+.h3 {
+    color: var(--secondary);
+    font-family: "Arvo", sans-serif;
+    line-height: normal;
+}
+
 .mda-body-text {
     color: var(--text);
     font-family: "Lato", sans-serif;
@@ -45,10 +52,11 @@
 
 /* Theme Colors */
 :root {
-    --surface: #F8F6F2;
-    --surface-dark: #E9E5D8;
+    --surface: #FFFCF7;
+    --surface-dark: #FAF6ED;
     --text: #191919;
-    --text-light: #333333;
+    --text-light: #525252;
+    --text-lightest: #C2C2C2;
     --primary: #3E6259;
     --primary-light: #9BC0B7;
     --primary-dark: #273F39;
