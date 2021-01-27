@@ -1,26 +1,45 @@
 .mda-sticky-nav-bar {
-    background-color: lightblue;
+    background-color: var(--primary-light);
     padding: 10px;
+    font-family: "Arvo", sans-serif;
+    font-weight: bold;
     font-size: larger;
-    vertical-align: middle;
     position: fixed;
     width: 100%;
     z-index: 1;}
 
 .container {
-    padding-top: 58px;
+    padding-top: 72px;
 }
 
 .mda-center-in-div {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
 }
 
-.mda-headline {
-    color: var(--primary)
+.mda-page-background {
+    background-color: var(--surface);
+}
+
+.h1 {
+    color: var(--primary);
+    font-family: "Arvo", sans-serif;
+    font-weight: bolder;
+    line-height: normal;
 }
 
 .mda-body-text {
-    color: var(--text)
+    color: var(--text);
+    font-family: "Lato", sans-serif;
+    font-weight: lighter;
+}
+
+.mda-link-text {
+    color: var(--accent);
+    font-family: "Lato", sans-serif;
+    font-style: oblique;
 }
 
 /* Theme Colors */
@@ -30,7 +49,7 @@
     --text: #191919;
     --text-light: #333333;
     --primary: #3E6259;
-    --primary-light: #67A293;
+    --primary-light: #9BC0B7;
     --primary-dark: #273F39;
     --secondary: #1D3B72;
     --secondary-light: #4D7BD1;
@@ -38,9 +57,4 @@
     --accent: #987D7C;
     --danger: #92140C;
     --danger-light: #F4837B;
-}
-
-/* Theme Fonts*/
-:root {
-
 }

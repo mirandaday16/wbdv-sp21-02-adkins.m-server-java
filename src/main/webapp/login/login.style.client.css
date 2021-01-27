@@ -1,12 +1,5 @@
-@import "../styles.css";
-
-.mda-bottom-link {
-    color: var(--accent)
-}
-
-
-
 .mda-btn-long {
     background-color: var(--text);
     color: var(--surface);
+    font-family: "Lato", sans-serif;
 }
