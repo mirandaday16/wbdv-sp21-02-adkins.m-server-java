@@ -11,15 +11,22 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
     <!-- Global Stylesheet -->
     <link href="../styles.css" rel="stylesheet">
+    <!-- Profile Stylesheet -->
+    <link href="profile.style.client.css" rel="stylesheet">
+    <!-- Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
 
-<body>
+<body class="mda-page-background">
 <div class="container">
 
-    <h1>
+    <!-- Headline-->
+    <h1 class="h1">
         Profile
     </h1>
 
+    <!-- Alerts-->
     <div class="alert alert-success" role="alert">
         Success!
     </div>
@@ -28,71 +35,97 @@
         Something went wrong...
     </div>
 
+    <!-- Form-->
+    <!-- Username label and input-->
     <div class="mb-3 row">
         <label for="inputUsername"
-               class="col-sm-2 col-form-label">
+               class="col-sm-2 col-form-label mda-body-text">
             Username
         </label>
         <div class="col-sm-10">
             <input type="text"
-                   class="form-control"
+                   class="form-control mda-body-text"
                    id="inputUsername">
         </div>
     </div>
 
+    <!-- Password label and input-->
     <div class="mb-3 row">
         <label for="inputPassword"
-               class="col-sm-2 col-form-label">
+               class="col-sm-2 col-form-label mda-body-text">
             Password
         </label>
         <div class="col-sm-10">
             <input type="password"
-                   class="form-control"
+                   class="form-control mda-body-text"
                    id="inputPassword">
         </div>
     </div>
 
+    <!-- Email label and input-->
     <div class="mb-3 row">
         <label for="inputEmail"
-               class="col-sm-2 col-form-label">
+               class="col-sm-2 col-form-label mda-body-text">
             Email
         </label>
         <div class="col-sm-10">
             <input type="email"
-                   class="form-control"
+                   class="form-control mda-body-text"
                    id="inputEmail">
         </div>
     </div>
 
+    <!-- Role label and input-->
     <div class="mb-3 row">
         <label for="inputRole"
-               class="col-sm-2 col-form-label">
+               class="col-sm-2 col-form-label mda-body-text">
             Role
         </label>
         <div class="col-sm-10">
             <select id="inputRole"
-                   class="form-control">
+                   class="form-control mda-body-text">
                 <option>Faculty</option>
                 <option>Student</option>
             </select>
         </div>
     </div>
 
+    <!-- DOB label and input-->
     <div class="mb-3 row">
         <label for="inputDOB"
-               class="col-sm-2 col-form-label">
+               class="col-sm-2 col-form-label mda-body-text">
             Date of Birth
         </label>
         <div class="col-sm-10">
             <input type="date"
-                   class="form-control"
+                   class="form-control mda-body-text"
                    id="inputDOB">
         </div>
     </div>
 
-    </label>
+    <!-- Update Button-->
     <div class="col-sm-10">
-        <a class="btn btn-danger btn-block"
+        <a class="btn mda-btn-update btn-block mda-center-in-div"
+           href="../course_list/course_list.template.client.html">
+            Update
+        </a>
+    </div>
+
+    <br/>
+
+    <!-- Return Button-->
+    <div class="col-sm-10">
+        <a class="btn mda-btn-return btn-block mda-center-in-div"
+           href="../course_list/course_list.template.client.html">
+            Return to Dashboard
+        </a>
+    </div>
+
+    <br/>
+
+    <!-- Log Out Button-->
+    <div class="col-sm-10">
+        <a class="btn mda-btn-log-out btn-block  mda-center-in-div"
            href="../index.html">
             Log Out
         </a>

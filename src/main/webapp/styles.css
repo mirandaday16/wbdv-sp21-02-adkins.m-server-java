@@ -2,6 +2,7 @@
     background-color: var(--primary-light);
     padding: 10px;
     font-family: "Arvo", sans-serif;
+    color: var(--primary-dark);
     font-weight: bold;
     font-size: larger;
     position: fixed;
@@ -45,7 +46,7 @@
 /* Theme Colors */
 :root {
     --surface: #F8F6F2;
-    --surface-dark: #DDD8C4;
+    --surface-dark: #E9E5D8;
     --text: #191919;
     --text-light: #333333;
     --primary: #3E6259;
@@ -56,5 +57,5 @@
     --secondary-dark: #0E1C36;
     --accent: #987D7C;
     --danger: #92140C;
-    --danger-light: #F4837B;
+    --danger-light: #F7A6A1;
 }

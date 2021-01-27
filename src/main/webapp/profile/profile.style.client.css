@@ -1,0 +1,31 @@
+.mda-btn-update {
+    background-color: var(--primary);
+    color: var(--surface);
+    font-family: "Lato", sans-serif;
+}
+
+.mda-btn-return {
+    background-color: var(--secondary);
+    color: var(--surface);
+    font-family: "Lato", sans-serif;
+}
+
+.mda-btn-log-out {
+    background-color: var(--danger);
+    color: var(--surface);
+    font-family: "Lato", sans-serif;
+}
+
+.alert-success {
+    background-color: var(--primary-light);
+    border-color: var(--primary);
+    font-family: "Lato", sans-serif;
+    font-style: oblique;
+}
+
+.alert-danger {
+    background-color: var(--danger-light);
+    border-color: var(--danger);
+    font-family: "Lato", sans-serif;
+    font-style: oblique;
+}
