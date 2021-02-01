@@ -1,7 +1,4 @@
-.list-group li {
-    background-color: var(--surface);
-}
-
+/* Widget Shape */
 .mda-widget-window {
     background-color: var(--surface);
     padding: 25px;
@@ -24,6 +21,7 @@
     margin-bottom: 0;
 }
 
+/* Tabs */
 .nav-tabs {
     border-bottom: 0;
 }
@@ -47,23 +45,49 @@
     font-family: "Lato", sans-serif;
 }
 
+/* Pills */
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     background-color: var(--secondary);
     font-family: "Lato", sans-serif;
 }
 
 .nav-pills a:hover {
-    background-color: var(--surface);
-    color: var(--secondary-light);
+    background-color: var(--secondary-light);
+    color: var(--surface-dark);
     font-family: "Lato", sans-serif;
 }
 
 .pills-section-underlined {
-    padding-top: 5px;
+    padding-top: 10px;
     padding-bottom: 5px;
     border-color: transparent;
     border-width: thin;
     border-style: solid;
     border-bottom-color: var(--text-lightest);
+}
 
+/* Side Bar */
+.modules-list-group li {
+    background-color: var(--surface);
+    font-family: "Lato", sans-serif;
+}
+
+.modules-list-group li a {
+    color: var(--text);
+}
+
+.modules-list-group li:hover {
+    background-color: var(--primary-light);
+    color: var(--text);
+}
+
+.list-group-item.active {
+    z-index: 2;
+    background-color: var(--primary);
+    border-color: transparent;
+    font-weight: bolder;
+}
+
+.list-group-item.active a {
+    color: var(--surface);
 }
