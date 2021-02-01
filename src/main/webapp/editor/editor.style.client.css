@@ -43,7 +43,7 @@
 
 .nav-tabs a:hover {
     background-color: var(--surface-dark);
-    color: var(--accent);
+    color: var(--text);
     font-family: "Lato", sans-serif;
 }
 
@@ -54,10 +54,7 @@
 
 .nav-pills a:hover {
     background-color: var(--surface);
-    color: var(--secondary);
-    border-style: inset;
-    border-width: thin;
-    border-color: var(--surface);
+    color: var(--secondary-light);
     font-family: "Lato", sans-serif;
 }
 
