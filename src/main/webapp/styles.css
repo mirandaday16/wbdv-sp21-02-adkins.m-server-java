@@ -10,6 +10,14 @@
     z-index: 1;
 }
 
+a {
+    color: var(--accent);
+}
+
+a:hover {
+    color: var(--accent-dark)
+}
+
 .container {
     padding-top: 72px;
 }
@@ -45,7 +53,6 @@
 }
 
 .mda-link-text {
-    color: var(--accent);
     font-family: "Lato", sans-serif;
     font-style: oblique;
 }
@@ -64,6 +71,7 @@
     --secondary-light: #4D7BD1;
     --secondary-dark: #0E1C36;
     --accent: #987D7C;
+    --accent-dark: #725B5A;
     --danger: #92140C;
     --danger-light: #F7A6A1;
 }
