@@ -67,6 +67,11 @@
 }
 
 /* Side Bar */
+
+.modules-list-group {
+    padding-inline-start: 0;
+}
+
 .modules-list-group li {
     background-color: var(--surface);
     font-family: "Lato", sans-serif;

@@ -29,3 +29,8 @@
     font-family: "Lato", sans-serif;
     font-style: oblique;
 }
+
+.form-control[readonly] {
+    background-color: var(--text-lightest);
+    color: var(--text-light);
+}
