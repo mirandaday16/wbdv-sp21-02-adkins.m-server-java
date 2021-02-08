@@ -1,0 +1,16 @@
+.mda-table-row-dark {
+    background-color: var(--secondary);
+    color: var(--surface);
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+}
+
+.mda-table-input-row {
+    background-color: var(--surface-dark);
+    font-family: "Lato", sans-serif;
+}
+
+.mda-table-text {
+    font-family: "Lato", sans-serif;
+    color: var(--text);
+}
