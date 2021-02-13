@@ -1,10 +1,5 @@
 // (function () {
-    const users = [
-        {id: 123, username: 'alice', firstName: 'Alice', lastName: 'Smith', role: "FACULTY"},
-        {id: 456, username: 'bailey', firstName: 'Bailey', lastName: 'Taylor', role: "STUDENT"},
-        {id: 789, username: 'charlie', firstName: 'Charlie', lastName: 'Reynolds', role: "STUDENT"},
-        {id: 135, username: 'dan', firstName: 'Dan', lastName: 'Green', role: "FACULTY"}
-    ];
+
 
 
     var rowTemplate;
