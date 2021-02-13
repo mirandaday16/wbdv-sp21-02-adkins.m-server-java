@@ -1,7 +1,5 @@
-// (function () {
-
-
-
+(function () {
+    var userService = new AdminUserServiceClient();
     var rowTemplate;
     var tbody;
 
@@ -10,6 +8,7 @@
     function main() {
         rowTemplate = jQuery('.mda-template');
         tbody = jQuery('tbody');
+        var users = userService.findAllUsers;
         renderUsers(users);
     }
 
@@ -57,4 +56,4 @@
     // function findUserById() { // optional - might not need this
     //     // TODO: Implement
     // }
-// })();
+})();
