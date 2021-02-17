@@ -4,21 +4,54 @@ function AdminUserServiceClient() {
     this.findUserById = findUserById;
     this.deleteUser = deleteUser;
     this.updateUser = updateUser;
-    this.url = 'https://wbdv-generic-server.herokuapp.com/api/001367581/users';
-    var self = this;
+
+    const self = this;
+    const url = 'https://wbdv-generic-server.herokuapp.com/api/001367581/users';
+
     function createUser(user) {
-        // TODO: Implement
-    }
+        fetch(url, {
+            method: 'POST',
+            body: user
+        })
+            .then(function(response) {
+                return response.json()
+            })
+        }
+
     function findAllUsers() {
-        return fetch(AdminUserServiceClient.url);
+        return fetch(url, {
+            method: 'GET'
+        })
+            .then(function(response) {
+            return response.json()
+        });
     }
+
     function findUserById(userId) {
-        // TODO: Implement
+        return fetch(url + userId, {
+            method: 'GET'
+        })
+            .then(function(response) {
+                return response.json()
+            });
     }
+
     function updateUser(userId, user) {
-        // TODO: Implement
+        fetch(url + userId, {
+            method: 'PUT',
+            body: user
+        })
+            .then(function(response) {
+                return response.json()
+            })
     }
+
+
     function deleteUser(userId) {
-        // TODO: Implement
-    }
+        fetch(url + userId, {
+            method: 'DELETE',
+        })
+            .then(function(response) {
+                return response.json()
+            })    }
 }
