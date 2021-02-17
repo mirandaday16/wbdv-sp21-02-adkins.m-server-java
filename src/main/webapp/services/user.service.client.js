@@ -19,7 +19,7 @@ function AdminUserServiceClient() {
         }
 
     function findAllUsers() {
-        return fetch(url, {
+        fetch(url, {
             method: 'GET'
         })
             .then(function(response) {
@@ -28,7 +28,7 @@ function AdminUserServiceClient() {
     }
 
     function findUserById(userId) {
-        return fetch(url + userId, {
+        fetch(url + userId, {
             method: 'GET'
         })
             .then(function(response) {

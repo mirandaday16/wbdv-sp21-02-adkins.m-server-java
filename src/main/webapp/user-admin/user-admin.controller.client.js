@@ -31,28 +31,28 @@ import User from "../../java/models/User.java"
         }
     }
 
-    function createUser() {
-        // TODO: Implement
+    function createUser(user) {
+        userService.createUser(user);
     }
 
-    function deleteUser() {
-        // TODO: Implement
+    function deleteUser(userId) {
+        userService.deleteUser(userId)
     }
 
     function selectUser() {
         // TODO: Implement
     }
 
-    function updateUser() {
-        // TODO: Implement
+    function updateUser(userId, user) {
+        userService.updateUser(userId, user)
     }
 
     function findAllUsers() { // optional - might not need this
         // TODO: Implement
     }
 
-    function findUserById() { // optional - might not need this
-        // TODO: Implement
+    function findUserById(userId) { // optional - might not need this
+        userService.findUserById(userId)
     }
 
 })();
