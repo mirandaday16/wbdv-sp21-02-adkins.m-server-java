@@ -1,57 +1,60 @@
 function AdminUserServiceClient() {
+    const self = this;
+
     this.createUser = createUser;
-    this.findAllUsers = findAllUsers();
+    this.findAllUsers = findAllUsers;
     this.findUserById = findUserById;
     this.deleteUser = deleteUser;
     this.updateUser = updateUser;
 
-    const self = this;
-    const url = 'https://wbdv-generic-server.herokuapp.com/api/001367581/users';
-
-    function createUser(user) {
-        fetch(url, {
-            method: 'POST',
-            body: user
-        })
-            .then(function(response) {
-                return response.json()
-            })
-        }
+    this.url = 'https://wbdv-generic-server.herokuapp.com/api/001367581/users';
 
     function findAllUsers() {
-        fetch(url, {
-            method: 'GET'
+        return fetch(self.url)
+            .then(function (response) {
+                return response.json()
+            });
+    }
+
+    function createUser(user) {
+        return fetch(self.url, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
         })
-            .then(function(response) {
-            return response.json()
-        });
+            .then(function (response) {
+                return response.json()
+            })
     }
 
     function findUserById(userId) {
-        fetch(url + userId, {
+        fetch(`${self.url}/${userId}`, {
             method: 'GET'
         })
-            .then(function(response) {
+            .then(function (response) {
                 return response.json()
             });
     }
 
     function updateUser(userId, user) {
-        fetch(url + userId, {
+        fetch(`${self.url}/${userId}`, {
             method: 'PUT',
             body: user
         })
-            .then(function(response) {
+            .then(function (response) {
                 return response.json()
             })
     }
 
 
     function deleteUser(userId) {
-        fetch(url + userId, {
-            method: 'DELETE',
+        return fetch(`${self.url}/${userId}`, {
+            method: 'DELETE'
         })
-            .then(function(response) {
+            .then(function (response) {
                 return response.json()
-            })    }
+            })
+    }
 }

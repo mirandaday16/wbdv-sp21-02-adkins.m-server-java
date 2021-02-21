@@ -18,3 +18,10 @@
 .mda-hidden {
     display: none;
 }
+
+.mda-transparent-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    display: block;
+}
