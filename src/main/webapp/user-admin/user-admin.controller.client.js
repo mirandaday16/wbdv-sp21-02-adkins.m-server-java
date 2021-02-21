@@ -21,13 +21,14 @@ function renderUsers(users) {
           <td class="mda-actions">
               <div class="btn-group">
                     <button class="mda-transparent-btn"><i id="${i}" class="fa fa-times mda-remove"></i></button>
-                    <button id="${user._id}" class="mda-transparent-btn mda-edit"><i class="fa fa-pencil"></i></button>
+                    <button  class="mda-transparent-btn"><i id="${user._id}" class="fa fa-pencil mda-edit"></i></button>
               </div>
           </td>
       </tr>
       `)
     }
     $(".mda-remove").click(deleteUser)
+    $(".mda-edit").click(selectUser)
 }
 
 function createUser() {
@@ -63,20 +64,18 @@ function deleteUser(event) {
         })
 }
 
-function selectUser() {
-    // TODO: Implement
+function selectUser(event) {
+    var selectBtn = $(event.target)
+    var userId = selectBtn.attr("id")
+    var user = users.find(user => user._id === userId)
+    $username.val(user.username)
+    $firstName.val(user.firstName)
+    $lastName.val(user.lastName)
+    $role.val(user.role)
 }
 
 function updateUser(userId, user) {
     // userService.updateUser(userId, user)
-}
-
-function findAllUsers() { // optional - might not need this
-    // TODO: Implement
-}
-
-function findUserById(userId) { // optional - might not need this
-    // userService.findUserById(userId)
 }
 
 function main() {
