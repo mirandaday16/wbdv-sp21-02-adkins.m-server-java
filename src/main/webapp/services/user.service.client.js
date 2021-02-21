@@ -39,9 +39,12 @@ function AdminUserServiceClient() {
     }
 
     function updateUser(userId, user) {
-        fetch(`${self.url}/${userId}`, {
+        return fetch(`${self.url}/${userId}`, {
             method: 'PUT',
-            body: user
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
         })
             .then(function (response) {
                 return response.json()

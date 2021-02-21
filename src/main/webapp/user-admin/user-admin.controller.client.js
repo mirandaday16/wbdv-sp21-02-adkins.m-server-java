@@ -1,6 +1,6 @@
 var $username, $password;
 var $firstName, $lastName, $role;
-var $removeBtn, $editBtn, $createBtn;
+var $updateBtn,  $createBtn;
 var $rowTemplate, $tbody;
 var userService = new AdminUserServiceClient();
 
@@ -29,6 +29,11 @@ function renderUsers(users) {
     }
     $(".mda-remove").click(deleteUser)
     $(".mda-edit").click(selectUser)
+
+    $username.val("")
+    $password.val("")
+    $firstName.val("")
+    $lastName.val("")
 }
 
 function createUser() {
@@ -44,11 +49,6 @@ function createUser() {
         .then(function (userFromServer) {
             users.push(userFromServer);
             renderUsers(users)
-
-            $username.val("")
-            $password.val("")
-            $firstName.val("")
-            $lastName.val("")
         })
 }
 
@@ -64,18 +64,28 @@ function deleteUser(event) {
         })
 }
 
+var selectedUser = null
 function selectUser(event) {
     var selectBtn = $(event.target)
     var userId = selectBtn.attr("id")
-    var user = users.find(user => user._id === userId)
-    $username.val(user.username)
-    $firstName.val(user.firstName)
-    $lastName.val(user.lastName)
-    $role.val(user.role)
+    selectedUser = users.find(user => user._id === userId)
+    $username.val(selectedUser.username)
+    $firstName.val(selectedUser.firstName)
+    $lastName.val(selectedUser.lastName)
+    $role.val(selectedUser.role)
 }
 
 function updateUser(userId, user) {
-    // userService.updateUser(userId, user)
+    selectedUser.username = $username.val()
+    selectedUser.firstName = $firstName.val()
+    selectedUser.lastName = $lastName.val()
+    selectedUser.role = $role.val()
+    userService.updateUser(selectedUser._id, selectedUser)
+        .then(function (status) {
+            var index = users.findIndex(user => user._id === selectedUser._id)
+            users[index] = selectedUser
+            renderUsers(users)
+        })
 }
 
 function main() {
@@ -87,13 +97,11 @@ function main() {
     $lastName = $('#lastNameFld')
     $role = $('#roleFld')
 
-    // $removeBtn = $(".mda-remove")
-    // $editBtn = $(".mda-edit")
     $createBtn = $(".mda-create")
-
-    // $removeBtn.click(deleteUser);
-    // $editBtn.click(updateUser);
     $createBtn.click(createUser);
+
+    $updateBtn = $(".mda-update")
+    $updateBtn.click(updateUser);
 
     userService
         .findAllUsers()
