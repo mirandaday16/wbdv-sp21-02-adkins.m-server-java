@@ -75,7 +75,7 @@ function selectUser(event) {
     $role.val(selectedUser.role)
 }
 
-function updateUser(userId, user) {
+function updateUser() {
     selectedUser.username = $username.val()
     selectedUser.firstName = $firstName.val()
     selectedUser.lastName = $lastName.val()
