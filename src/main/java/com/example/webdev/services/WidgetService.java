@@ -27,5 +27,15 @@ public class WidgetService {
         return widgets;
     }
 
+    public List<Widget> findWidgetsForTopic(String topicId) {
+        List<Widget> widgetList = new ArrayList<Widget>();
+        for (Widget w: widgets) {
+            if(w.getTopicId().equals(topicId)) {
+                widgetList.add(w);
+            }
+        }
+        return widgetList;
+    }
+
 
 }
