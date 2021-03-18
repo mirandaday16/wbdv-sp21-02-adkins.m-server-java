@@ -3,4 +3,5 @@
 
 Assignments in this repo:
  - **Assignment 1**: User Interface Design (HTML, CSS, Bootstrap)
+ - **Assignment 2**: Programming the Browser (JavaScript)
  - **Assignment 5**: RESTful Web Services
