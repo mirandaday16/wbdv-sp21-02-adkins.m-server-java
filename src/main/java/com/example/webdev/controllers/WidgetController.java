@@ -33,9 +33,9 @@ public class WidgetController {
         return service.createWidget(topicId, widget);
     }
 
-    @DeleteMapping("/api/widgets/{widgetId}")
+    @DeleteMapping("/api/widgets/{wid}")
     public Integer deleteWidget(
-            @PathVariable("widgetId") Integer widgetId
+            @PathVariable("wid") long widgetId
     ) {
         return service.deleteWidget(widgetId);
     }
