@@ -33,4 +33,11 @@ public class WidgetController {
         return service.createWidget(topicId, widget);
     }
 
+    @DeleteMapping("/api/widgets/{widgetId}")
+    public Integer deleteWidget(
+            @PathVariable("widgetId") Integer widgetId
+    ) {
+        return service.deleteWidget(widgetId);
+    }
+
 }

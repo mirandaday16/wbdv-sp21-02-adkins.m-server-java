@@ -45,5 +45,17 @@ public class WidgetService {
         return widget;
     }
 
+    public Integer deleteWidget (Integer widgetId) {
+        int index = -1;
+        for (int i=0; i<widgets.size(); i++) {
+            if (widgets.get(i).getId() == widgetId) {
+                index = i;
+                widgets.remove(index);
+                return 1;
+            }
+        }
+        return -1;
+    }
+
 
 }
