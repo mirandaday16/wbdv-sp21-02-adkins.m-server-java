@@ -1,5 +1,6 @@
 package com.example.webdev.models;
 
+
 public class Widget {
     private long id;
     private String topicId;
