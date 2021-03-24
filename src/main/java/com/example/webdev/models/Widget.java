@@ -1,8 +1,14 @@
 package com.example.webdev.models;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Entity
 public class Widget {
+
+    @Id
     private long id;
+
     private String topicId;
     private String type;
     private Integer size;
