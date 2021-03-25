@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Service
@@ -14,8 +13,6 @@ public class WidgetService {
 
     @Autowired
     WidgetRepository repository;
-
-    private List<Widget> widgets = new ArrayList<Widget>();
 
     public List<Widget> findAllWidgets() {
         return (List<Widget>) repository.findAll();
