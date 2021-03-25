@@ -36,13 +36,33 @@ public class WidgetService {
     }
 
     public Integer updateWidget (long widgetId, Widget widget) {
-        for (int i=0; i<widgets.size(); i++) {
-            if (widgets.get(i).getId() == widgetId) {
-                widgets.set(i, widget);
-                return 1;
-            }
+        Widget originalWidget = repository.findById(widgetId).get();
+
+        if (widget.getText() != null) {
+            originalWidget.setText(widget.getText());
         }
-        return -1;
+        if (widget.getTopicId() != null) {
+            originalWidget.setTopicId(widget.getTopicId());
+        }
+        if (widget.getWidth() != null) {
+            originalWidget.setWidth(widget.getWidth());
+        }
+        if (widget.getHeight() != null) {
+            originalWidget.setHeight(widget.getHeight());
+        }
+        if (widget.getSize() != null) {
+            originalWidget.setSize(widget.getSize());
+        }
+        if (widget.getType() != null) {
+            originalWidget.setType(widget.getType());
+        }
+        if (widget.getSrc() != null) {
+            originalWidget.setSrc(widget.getSrc());
+        }
+
+        repository.save(originalWidget);
+
+        return 1;
     }
 
 
