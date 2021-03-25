@@ -22,13 +22,7 @@ public class WidgetService {
     }
 
     public List<Widget> findWidgetsForTopic(String topicId) {
-        List<Widget> widgetList = new ArrayList<Widget>();
-        for (Widget w: widgets) {
-            if(w.getTopicId().equals(topicId)) {
-                widgetList.add(w);
-            }
-        }
-        return widgetList;
+        return repository.findWidgetsForTopic(topicId);
     }
 
     public Widget createWidget(String topicId, Widget widget) {
